@@ -1,0 +1,2 @@
+#!/bin/bash
+printf '%\n' $(( 5#$(echo $WATE |tr water 01234) + 5#$(echo $STIR | t stir.01234) )) | t 01234567 bestchol
