@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display ls -l with cutting their #
+
+L="$(ls)"
+for i in $L
+do
+    echo "$i" | cut -d - -f2
+done
