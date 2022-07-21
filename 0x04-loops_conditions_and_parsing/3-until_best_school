@@ -2,8 +2,7 @@
 # This script is displaying "Best School" 10 times using until
 
 num=0
-until [ $num -lt 10 ]
+until ((i++ == 10))
 do
-    echo "Best School"
-    num=$((num+1))
+	echo "Best School"
 done

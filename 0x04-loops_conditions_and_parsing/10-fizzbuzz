@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 # Fizzbuzz
 
-for i in {1..100}
+for ((n = 1; n <= 100; ++n))
 do
-    if [ $(( i%15 )) -eq 0 ]
+    if ((n % 3 && n % 5))
     then
-        echo "Fizzbuzz"
-    elif [ $(( i%5 )) -eq 0 ]
-    then
-        echo "Buzz"
-    elif [ $(( i%3 )) -eq 0 ]
-    then
-        echo "Fizz"
+        echo $n
     else
-        echo "$i"
+        (( n % 3 )) || echo -n "Fizz"
+        (( n % 5 )) || echo -n "Buzz"
+        echo
     fi
 done
