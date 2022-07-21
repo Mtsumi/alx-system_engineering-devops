@@ -4,10 +4,10 @@
 num=0
 while [ $num -lt 10 ]
 do
-    if [ $num -eq 3 ]
+    if [ $num -eq 4 ]
     then
         echo "bad luck"
-    elif [ $num -eq 7 ]
+    elif [ $num -eq 8 ]
     then
         echo "good luck"
     else

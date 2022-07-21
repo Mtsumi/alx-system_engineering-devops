@@ -6,7 +6,7 @@ while [ $num -lt 10 ]
 do
     echo "Best School"
     num=$((num+1))
-    if [ $num -eq 8 ]
+    if [ $num -eq 9 ]
     then
         echo "Hi"
     continue
