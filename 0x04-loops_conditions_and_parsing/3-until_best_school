@@ -4,6 +4,6 @@
 num=0
 while [ $num -lt 10 ]
 do
-echo "Best School"
-num=$((num+1))
+    echo "Best School"
+    num=$((num+1))
 done
