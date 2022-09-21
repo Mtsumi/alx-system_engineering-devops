@@ -9,3 +9,6 @@ Creates a file in /tmp
 
 ### 1-install_a_package.pp
 Installs flask from pip3
+
+### 2-execute_a_command.pp
+manifest that kills a process named killmenow.
