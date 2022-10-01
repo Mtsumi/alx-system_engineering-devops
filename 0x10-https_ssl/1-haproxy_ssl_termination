@@ -40,7 +40,7 @@ frontend aly-mtsumi.tech-http-frontend
     default_backend aly-mtsumi.tech-backend
 
 frontend aly-mtsumi.tech-https-frontend
-    bind  *:443 ssl crt  /etc/letsencrypt/live/aly-mtsumi.tech.pem
+    bind  *:443 ssl crt  /etc/letsencrypt/live/www.aly-mtsumi.tech.pem
     http-request set-header X-Forwarded-Proto https
     default_backend aly-mtsumi.tech-backend
 
