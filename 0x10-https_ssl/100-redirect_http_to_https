@@ -1,0 +1,23 @@
+global
+        log /dev/log    local0
+	stats socket /run/haproxy/admin.sock mode 660 level admin
+
+defaults
+        log     global
+        mode    http
+        option  httplog
+	timeout connect  10s
+	timeout client  30s
+	timeout server  30s
+
+frontend  aly-mtsumi.tech-frontend
+	bind *:80
+	bind *:443 ssl crt /etc/letsencrypt/live/www.aly-mtsumi.tech.pem
+	http-request redirect scheme https code 301 unless { ssl_fc }
+	http-request set-header X-Forwarded-Proto https
+	default_backend aly-mtsumi.tech-backend
+
+backend aly-mtsumi.tech-backend
+	balance roundrobin
+	server 21966-web-01 3.238.87.75:80 check
+    server 21966-web-02 3.234.245.243:80 check
