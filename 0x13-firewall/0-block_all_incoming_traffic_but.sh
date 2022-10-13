@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install ufw -y
 sudo ufw status
-sudo ufw enable -y
+sudo ufw enable
 
 sudo ufw default deny incoming -y
 sudo ufw default allow outgoing -y
